@@ -428,7 +428,7 @@ a{
   font-style: italic;
 }
 .project-card:hover .project-content {
-    transform: scale(1.17); /* Increase the scale value on hover */
+    transform: scale(1.17); 
 }
 
 #project2{
