@@ -229,18 +229,19 @@
     <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
 
 <script> 
-    var typeData = new Typed(".role", {
-      strings: [
-        "Web Developer",
-        "UI-UX Designer",
-        "Student",
-        "Coder",
-      ],
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 80,
-      backDelay: 1000,
-    });
+   const textElement = document.getElementById('rollingText');
+const text = 'This is a rolling text animation';
+let index = 0;
+
+function type() {
+  if (index < text.length) {
+    textElement.textContent += text[index];
+    index++;
+    setTimeout(type, 100); // Adjust the delay as needed
+  }
+}
+
+type();
 
 </script>
 </body>
